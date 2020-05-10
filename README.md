@@ -21,3 +21,31 @@ GoLand
 <img width="1069" alt="Screen Shot 2020-05-10 at 3 10 43 PM" src="https://user-images.githubusercontent.com/8094904/81508307-4fa11b80-92d1-11ea-8ff6-ae7843abadc0.png">
 
 - set the port if you change it while mapping them, and just run the new configuration.
+
+VS Code
+
+- create a launch.json file
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "/go/app",
+            "port": 2345,
+            "env": {},
+            "args": [],
+            "showLog": true,
+            "trace": "verbose"
+          }
+    ]
+}
+```
+
+port will be 2345 y default, but if you changed it in the mapping process of the container it needs to be set here.
+
+- go to Run/Start Debugging
