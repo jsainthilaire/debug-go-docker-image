@@ -10,8 +10,14 @@ The recommended way is to set the session is using docker-compose.
 - map the debugger port, by default is 2345, this can be change by setting the env variable DEBUG_ADDR
 - set the security_opt to seccomp:unconfined in order to run the container without the default secure computing mode.
 
+note: while running in debug mode you need to connect the debugger client and your code will start running, you program execution will be blocked if you haven't connect your client.
+
 ## Configure your editor/IDE
 
-###Goland
+GoLand
 
 - go to run and select edit configuration and add a new go remote profile.
+
+<img width="1069" alt="Screen Shot 2020-05-10 at 3 10 43 PM" src="https://user-images.githubusercontent.com/8094904/81508307-4fa11b80-92d1-11ea-8ff6-ae7843abadc0.png">
+
+- set the port if you change it while mapping them, and just run the new configuration.
